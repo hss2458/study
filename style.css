@@ -1,0 +1,49 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+.container {
+  width: 1200px;
+  margin: auto; }
+
+#header {
+  border-bottom: 1px solid #dddddd; }
+  #header .top-header .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 33px; }
+  #header .top-header .links {
+    display: flex; }
+    #header .top-header .links a {
+      color: #777777;
+      font-size: 13px;
+      display: flex;
+      padding: 0 10px; }
+      #header .top-header .links a.login {
+        border: 1px solid #666;
+        padding: 0px 8px; }
+  #header .main-header .container {
+    display: flex;
+    justify-content: space-between; }
+  #header .main-header .gnb {
+    display: flex; }
+  #header .main-header nav {
+    display: flex; }
+    #header .main-header nav .nav-item .nav-link {
+      display: flex;
+      /* a링크에게 높이값주기 위해 flex */
+      align-items: center;
+      color: #333;
+      padding: 0 20px;
+      text-transform: uppercase;
+      height: 60px; }
+  #header .main-header .btn-search {
+    display: flex;
+    align-items: center; }
+
+/*# sourceMappingURL=style.css.map */

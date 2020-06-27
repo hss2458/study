@@ -1,0 +1,110 @@
+@import "reset";
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+header {
+  .top-header {
+    background: #343434;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      .links {
+        a {
+          display: inline-flex;
+          align-items: center;
+          padding: 0 10px;
+          height: 40px;
+          border-right: 1px solid #525252;
+          transition: 0.5s;
+            i {
+              color:#dedede;
+              font-size: 17px;
+            }
+          }
+
+        a:nth-child(1):hover {
+          background: #00a2d3;
+
+        }
+        a:nth-child(2):hover {
+          background: #721c24;
+
+        }
+        a:nth-child(3):hover {
+          background: #004085;
+
+        }
+        a:nth-child(4):hover {
+          background: #543e90;
+        }
+        a:nth-child(5):hover {
+          background: #00a2d3;
+        }
+
+        }
+
+      .txt {
+        display: flex;
+        p {
+          display: flex;
+          color: #dedede;
+          word-spacing: -5px;
+          span {
+            display: flex;
+            align-items: center;
+            color: #dedede;
+            font-size: 24px;
+          }
+        }
+        p:nth-child(1) {
+          padding-right: 30px;
+        }
+      }
+      }
+    }
+
+  .main-header {
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 84px;
+        .logo {
+          a{
+            img {
+              display: flex;
+              width: 171px;
+              height: 45px;
+            }
+          }
+        }
+
+        nav {
+          display: flex;
+          align-items: center;
+          ul {
+            display: flex;
+            li {
+              a{
+                padding-right: 30px;
+                color: #2f362f;
+                font-weight: 600;
+                i {
+                  padding-left: 5px;
+                }
+              }
+              .home {
+                color: #3498db;
+              }
+            }
+          }
+        }
+      }
+    }
+  }

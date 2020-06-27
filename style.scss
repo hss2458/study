@@ -1,0 +1,65 @@
+@import "reset";
+
+.container {
+  width: 1200px;
+  margin: auto;
+
+}
+
+#header {
+  border-bottom: 1px solid #dddddd;
+  .top-header {
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 33px;
+    }
+
+    .links {
+      display: flex;
+      a {
+        color: #777777;
+        font-size: 13px;
+        display: flex;
+        padding: 0 10px;
+
+          &.login {
+            border: 1px solid #666;
+            padding: 0px 8px;
+          }
+      }
+    }
+
+  }
+  .main-header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+
+    .gnb {
+      display: flex;
+    }
+
+    nav {
+      display: flex;
+      .nav-item {
+        .nav-link {
+          display: flex; /* a링크에게 높이값주기 위해 flex */
+          align-items: center;
+          color: #333;
+          padding: 0 20px;
+          text-transform: uppercase;
+          height: 60px;
+        }
+      }
+    }
+
+    .btn-search {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
