@@ -17,9 +17,11 @@ img {
   margin: auto;
   padding: 0 15px; }
 
+/**************** header 영역 시작 *****************/
 header {
-  background: #fff;
-  border-bottom: 1px solid #ddd; }
+  position: relative;
+  /* 드롭 다운 메뉴 부모 선언 */
+  background: #fff; }
   header .top-header .container {
     display: flex;
     justify-content: flex-end;
@@ -36,21 +38,95 @@ header {
         header .top-header .container .links a.login {
           border: 1px solid #c2c2c2;
           padding: 0 8px; }
-  header .main-header .container {
+  header .main-header {
+    border-bottom: 1px solid #ddd; }
+    header .main-header .container {
+      display: flex;
+      justify-content: space-between;
+      /* 자식요소들(logo, gnb가 비율에 맞게 벽쪽으로 붙음) */
+      align-items: center;
+      height: 68px; }
+      header .main-header .container .gnb {
+        display: flex;
+        align-items: center; }
+        header .main-header .container .gnb nav {
+          display: flex; }
+          header .main-header .container .gnb nav .nav-div:hover {
+            /* &는 자기 자신에게 css를 줄 수 있음 '.nav-div를 hover했을 때라는 뜻' */ }
+            header .main-header .container .gnb nav .nav-div:hover .dropdown {
+              max-height: 1000px;
+              transition: max-height 2s;
+              border-bottom: 1px solid #ddd; }
+          header .main-header .container .gnb nav .nav-div .nav-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            padding: 0 6px;
+            color: #000;
+            height: 68px; }
+          header .main-header .container .gnb nav .nav-div .blue {
+            color: #1f75d6; }
+          header .main-header .container .gnb nav .nav-div .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            max-height: 0;
+            overflow: hidden; }
+            header .main-header .container .gnb nav .nav-div .dropdown .container {
+              height: auto; }
+              header .main-header .container .gnb nav .nav-div .dropdown .container ul {
+                display: flex;
+                padding: 30px 0; }
+                header .main-header .container .gnb nav .nav-div .dropdown .container ul li {
+                  padding-right: 30px; }
+                  header .main-header .container .gnb nav .nav-div .dropdown .container ul li .sub-category {
+                    margin-bottom: 10px; }
+                  header .main-header .container .gnb nav .nav-div .dropdown .container ul li a {
+                    display: flex;
+                    font-size: 14px;
+                    color: #666;
+                    padding: 5px 0; }
+        header .main-header .container .gnb .btn-search {
+          padding: 0 0 0 8px; }
+
+/**************** section 영역 시작 *****************/
+section.post {
+  background: #f2f3f6;
+  padding: 88px 0; }
+  section.post .title-area {
+    text-align: center;
+    margin-bottom: 50px; }
+    section.post .title-area h2 {
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: uppercase; }
+  section.post ul {
     display: flex;
-    justify-content: space-between;
-    /* 자식요소들(logo, gnb가 비율에 맞게 벽쪽으로 붙음) */
-    align-items: center;
-    height: 68px; }
-    header .main-header .container .gnb {
-      display: flex; }
-      header .main-header .container .gnb nav .nav-item {
-        font-size: 14px;
-        padding: 0 6px;
-        color: #000; }
-      header .main-header .container .gnb nav a:nth-child(2) {
-        color: #4898f1; }
-      header .main-header .container .gnb .btn-search {
-        padding: 0 0 0 8px; }
+    flex-wrap: wrap;
+    /* 줄바꿈이 되게 하는 속성 */ }
+    section.post ul li {
+      width: 25%;
+      /* 한 줄에 4개씩 비율 맞춰서 출력 */
+      padding: 15px; }
+      section.post ul li .item {
+        box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.15);
+        transition: 0.3s; }
+        section.post ul li .item:hover {
+          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.25); }
+        section.post ul li .item .desc {
+          padding: 15px;
+          background: #fff; }
+          section.post ul li .item .desc h3 {
+            font-size: 18px;
+            text-transform: capitalize;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px; }
+          section.post ul li .item .desc p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4; }
 
 /*# sourceMappingURL=style.css.map */
